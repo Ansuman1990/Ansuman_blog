@@ -18,6 +18,9 @@
       outline: 2px dashed #3b82f6;
       outline-offset: 4px;
     }
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body class="p-4 md:p-8">
@@ -26,12 +29,19 @@
     <!-- Left Column: Personal Details -->
     <div class="md:col-span-1 bg-white rounded-xl shadow-lg p-6 h-fit sticky top-8">
       <div class="flex flex-col items-center text-center">
-        <img src="https://placehold.co/150x150/111827/FFFFFF?text=Profile" alt="Profile Picture" class="w-32 h-32 rounded-full mb-4 object-cover shadow-lg">
-        <h1 class="text-3xl font-bold text-gray-900" contenteditable="true">Your Name</h1>
+        <img id="profile-pic" src="https://placehold.co/150x150/111827/FFFFFF?text=Profile" alt="Profile Picture" class="w-32 h-32 rounded-full mb-4 object-cover shadow-lg cursor-pointer">
+        
+        <!-- Upload input -->
+        <input type="file" id="uploadInput" accept="image/*" class="hidden">
+        <button onclick="document.getElementById('uploadInput').click()" class="px-3 py-1 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+          Upload Profile Picture
+        </button>
+
+        <h1 class="text-3xl font-bold text-gray-900 mt-4" contenteditable="true">Your Name</h1>
         <p class="text-gray-600 mt-2" contenteditable="true">
           Welcome to my space where technology meets business transformation. I’m Ansuman Pradhan, MBA from XIMB and currently an Associate Director at PwC, with deep experience in consulting and enterprise technology solutions.
 
-Through this blog, I share insights on the latest developments in technology, digital transformation, and consulting trends—from emerging innovations shaping industries to strategic perspectives on business challenges. My goal is to simplify complex ideas, spark meaningful discussions, and provide practical takeaways for professionals, leaders, and enthusiasts navigating today’s fast-changing landscape.
+          Through this blog, I share insights on the latest developments in technology, digital transformation, and consulting trends—from emerging innovations shaping industries to strategic perspectives on business challenges. My goal is to simplify complex ideas, spark meaningful discussions, and provide practical takeaways for professionals, leaders, and enthusiasts navigating today’s fast-changing landscape.
         </p>
       </div>
       <div class="mt-6 pt-6 border-t border-gray-200">
@@ -82,5 +92,22 @@ Through this blog, I share insights on the latest developments in technology, di
       </div>
     </div>
   </div>
+
+  <script>
+    // Handle profile picture upload
+    const uploadInput = document.getElementById('uploadInput');
+    const profilePic = document.getElementById('profile-pic');
+
+    uploadInput.addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          profilePic.src = e.target.result; // Update image preview
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
 </body>
 </html>
