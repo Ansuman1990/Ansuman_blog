@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Blog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f4f6;
+      color: #1f2937;
+    }
+    [contenteditable="true"] {
+      outline: 2px dashed #3b82f6;
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8">
+  <div class="max-w-7xl mx-auto grid gap-8 md:grid-cols-3">
 
+    <!-- Left Column: Personal Details -->
+    <div class="md:col-span-1 bg-white rounded-xl shadow-lg p-6 h-fit sticky top-8">
+      <div class="flex flex-col items-center text-center">
+        <img src="https://placehold.co/150x150/111827/FFFFFF?text=Profile" alt="Profile Picture" class="w-32 h-32 rounded-full mb-4 object-cover shadow-lg">
+        <h1 class="text-3xl font-bold text-gray-900" contenteditable="true">Your Name</h1>
+        <p class="text-gray-600 mt-2" contenteditable="true">
+          Welcome to my space where technology meets business transformation. I’m Ansuman Pradhan, MBA from XIMB and currently an Associate Director at PwC, with deep experience in consulting and enterprise technology solutions.
+
+Through this blog, I share insights on the latest developments in technology, digital transformation, and consulting trends—from emerging innovations shaping industries to strategic perspectives on business challenges. My goal is to simplify complex ideas, spark meaningful discussions, and provide practical takeaways for professionals, leaders, and enthusiasts navigating today’s fast-changing landscape.
+        </p>
+      </div>
+      <div class="mt-6 pt-6 border-t border-gray-200">
+        <h2 class="text-lg font-semibold text-gray-800 mb-4">Contact & Socials</h2>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-blue-600 hover:underline transition-colors duration-200" contenteditable="true">Email: your.email@example.com</a></li>
+          <li><a href="#" class="text-blue-600 hover:underline transition-colors duration-200" contenteditable="true">Twitter: @yourhandle</a></li>
+          <li><a href="#" class="text-blue-600 hover:underline transition-colors duration-200" contenteditable="true">LinkedIn: /in/yourprofile</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Column: Blog Posts -->
+    <div class="md:col-span-2">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Latest Blog Posts</h2>
+      <div class="space-y-8">
+
+        <!-- Blog Post 1 -->
+        <article class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900" contenteditable="true">The Future of AI in Web Development</h3>
+          <p class="text-sm text-gray-500 mt-1" contenteditable="true">Published on October 1, 2025</p>
+          <p class="mt-4 text-gray-700 leading-relaxed" contenteditable="true">
+            Artificial Intelligence is rapidly changing the landscape of web development, from automating repetitive tasks to creating more personalized user experiences. In this post, I'll explore some of the most exciting tools and concepts on the horizon.
+          </p>
+          <a href="#" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900" contenteditable="true">A Guide to Learning Modern JavaScript</h3>
+          <p class="text-sm text-gray-500 mt-1" contenteditable="true">Published on September 25, 2025</p>
+          <p class="mt-4 text-gray-700 leading-relaxed" contenteditable="true">
+            JavaScript is more powerful than ever. With new frameworks and syntax constantly emerging, it can be tough to keep up. This guide will walk you through the essential topics you need to master to become a proficient modern JavaScript developer.
+          </p>
+          <a href="#" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900" contenteditable="true">My Experience Building a Serverless App</h3>
+          <p class="text-sm text-gray-500 mt-1" contenteditable="true">Published on September 18, 2025</p>
+          <p class="mt-4 text-gray-700 leading-relaxed" contenteditable="true">
+            Going serverless was a game-changer for my recent project. I'll share the challenges I faced, the benefits I discovered, and some key lessons learned along the way.
+          </p>
+          <a href="#" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
